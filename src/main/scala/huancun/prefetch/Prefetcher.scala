@@ -14,7 +14,7 @@ class PrefetchReq(implicit p: Parameters) extends PrefetchBundle {
   val source = UInt(sourceIdBits.W)
   val pfSource = UInt(MemReqSource.reqSourceBits.W)
 
-  def isBOP: Bool = pfSource === MemReqSource.Prefetch2L2BOP.id.U
+  def isBOP: Bool = pfSource === MemReqSource.Prefetch2L2PBOP.id.U
   def isSMS: Bool = pfSource === MemReqSource.Prefetch2L2SMS.id.U
   def isTP: Bool = pfSource === MemReqSource.Prefetch2L2TP.id.U
 }
